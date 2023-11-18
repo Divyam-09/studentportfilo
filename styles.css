@@ -1,0 +1,251 @@
+/* person bg image */
+* {
+    box-sizing: border-box;
+
+}
+
+/* Navbar styles */
+
+.navbar .navbar-nav .nav-item {
+    position: relative;
+}
+
+
+.nav-link::before {
+    transition: 300ms;
+    bottom: 5px;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+}
+
+a.nav-link-fade-up::before {
+    width: 80%;
+    bottom: 10px;
+    opacity: 0;
+}
+
+a.nav-link-fade-up:hover::before {
+    bottom: 2px;
+    opacity: 1;
+}
+
+/* Backgroung Image section */
+.bgimage {
+    width: 100%;
+    height: 100vh;
+    background: url(Assets/Images/bg-img1-dp.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.perosn-title {
+    font-size: 4.5rem;
+}
+
+.person-desc {
+    font-size: 2rem;
+}
+
+.person-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* about section */
+.imageAboutpage {
+    background: url(Assets/Images/about-img.png);
+    background-size: cover;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* services section */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+}
+
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card:hover .servicesIcon {
+    color: #008000;
+}
+
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+
+/* social media icons */
+.social-icons {
+    font-size: 36px;
+    justify-content: space-between;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-twitch:hover {
+    color: skyblue;
+}
+
+.conatct-left {
+    color: #fff;
+}
+
+.conatct-left p i {
+    margin-right: 10px;
+}
+
+.fab {
+    color: #fff;
+}
+
+/* footer section */
+#footer {
+    text-align: center;
+}
+
+.about-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.about-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.about-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.about-links.active-link::after {
+    width: 50%;
+
+}
+
+.about-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.about-contents ul li span {
+    color: #b54;
+    font-size: 15px;
+}
+
+.about-contents {
+    display: none;
+}
+
+.about-contents.active-tab {
+    display: block;
+}
+
+#msg {
+    color: #008000;
+    margin-top: 30px;
+    display: block;
+}
+
+#footer {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.fa-solid {
+    display: none;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        background: rgb(52, 149, 52);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        padding-top: 40px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    a.nav-link-fade-up::before {
+        width: 35%;
+        bottom: 10px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    .navbar-toggler {
+        display: block;
+        font-size: 25px;
+        border-color: #fff;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #fff;
+    }
+
+    .closeicon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .submit-form {
+        padding: 10px;
+    }
+
+    #footer {
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
